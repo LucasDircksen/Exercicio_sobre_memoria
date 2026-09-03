@@ -6,11 +6,21 @@
 a = [1, 2, 3]
 b = a          # b aponta para a MESMA lista
 b.append(4)
-print(a)       # [1, 2, 3, 4]
+print(a)       
 
-c = a.copy()   # cópia rasa (nova lista, mesmos objetos)
+c = a.copy()   
 
+compValor = c == a
+
+print(id(c) == id(a))  
+
+if compValor:
+    print("Iguais")
+else:
+    print("Valores diferentes")
 #------------------------------------------------------------------------------------------------------------------------------
+
+print("---------------------------------------------------")
 
 #EXEMPLO 2 --------------------------------------------------------------------------------------------------------------------
 
@@ -31,4 +41,13 @@ if z == x:
 else:
     print("Valores diferentes")
 
+
 #------------------------------------------------------------------------------------------------------------------------------
+
+a = y
+print(id(a) == id(y))  
+
+if a == y:             
+    print("Iguais")
+else:
+    print("Valores diferentes")
